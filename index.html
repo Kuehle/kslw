@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script>
+  <script src="app.js"></script>
+  <link rel="stylesheet" href="app.css">
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+</head>
+<body ng-app="app" ng-controller="mapCtrl as vm">
+
+  <div class="result" ng-show="vm.result" ng-click="vm.result = ''">
+    {{vm.result}}
+  </div>
+
+  <div class="container-fluid" >
+    <div class="row" ng-style="vm.style">
+
+
+      <div class="col-sm-3">
+
+        <div class="list-item mappick" ng-repeat="map in vm.cup0" ng-click="map.state = vm.nextState(map.state)">
+          <div ng-class="map.state" class="map" ng-style="map.pic">
+            <!-- {{map.name}} -->
+            <br>
+
+          <!--  <div class="btn-group" style="margin-top: 90px">
+              <button class="btn btn-danger" ng-click="map.state ='ban' "><span class="glyphicon glyphicon-remove"></span></button>
+              <button class="btn btn-warning" ng-click="map.state ='none' "><span class="glyphicon glyphicon-repeat"></span></button>
+              <button class="btn btn-success" ng-click="map.state ='pick' "><span class="glyphicon glyphicon-ok"></span></button>
+            </div> -->
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-sm-3">
+
+        <div class="list-item mappick" ng-repeat="map in vm.cup1" ng-click="map.state = vm.nextState(map.state)" >
+          <div ng-class="map.state" class="map" ng-style="map.pic">
+            <!-- {{map.name}} -->
+            <br>
+<!--
+            <div class="btn-group" style="margin-top: 90px">
+              <button class="btn btn-danger" ng-click="map.state ='ban' "><span class="glyphicon glyphicon-remove"></span></button>
+              <button class="btn btn-warning" ng-click="map.state ='none' "><span class="glyphicon glyphicon-repeat"></span></button>
+              <button class="btn btn-success" ng-click="map.state ='pick' "><span class="glyphicon glyphicon-ok"></span></button>
+            </div> -->
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-sm-3">
+
+        <div class="list-item mappick" ng-repeat="map in vm.cup2" ng-click="map.state = vm.nextState(map.state)">
+          <div ng-class="map.state" class="map" ng-style="map.pic">
+            <!-- {{map.name}} -->
+            <br>
+
+            <!-- <div class="btn-group" style="margin-top: 90px">
+              <button class="btn btn-danger" ng-click="map.state ='ban' "><span class="glyphicon glyphicon-remove"></span></button>
+              <button class="btn btn-warning" ng-click="map.state ='none' "><span class="glyphicon glyphicon-repeat"></span></button>
+              <button class="btn btn-success" ng-click="map.state ='pick' "><span class="glyphicon glyphicon-ok"></span></button>
+            </div> -->
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-sm-3">
+
+        <div class="list-item mappick" ng-repeat="map in vm.cup3" ng-click="map.state = vm.nextState(map.state)">
+          <div ng-class="map.state" class="map" ng-style="map.pic">
+            <!-- {{map.name}} -->
+            <br>
+
+
+            <!-- <div class="btn-group" style="margin-top: 90px">
+              <button class="btn btn-danger" ng-click="map.state ='ban' "><span class="glyphicon glyphicon-remove"></span></button>
+              <button class="btn btn-warning" ng-click="map.state ='none' "><span class="glyphicon glyphicon-repeat"></span></button>
+              <button class="btn btn-success" ng-click="map.state ='pick' "><span class="glyphicon glyphicon-ok"></span></button>
+            </div> -->
+          </div>
+        </div>
+
+      </div>
+
+
+
+      <div class="col-xs-12 eval">
+
+          <button class="btn-lg btn-info" ng-click="vm.choseMap()">GIVE ME MAP!</button>
+          <button class="btn-lg btn-warning" ng-click="vm.clearAll()">CLEAR ALL</button>
+          
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+</body>
+</html>
