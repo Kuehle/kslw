@@ -56,15 +56,11 @@ app.controller('mapCtrl', function(){
 
   vm.concatMaps = function(){
     var maps2 = vm.cup0.concat(vm.cup1, vm.cup2, vm.cup3);
-
-    console.log(maps2);
-
     return maps2;
-
   }
 
   vm.nextState = function(oldState) {
-  var newState = 'test';  
+  var newState = 'test';
   if(oldState === 'none'){
      newState = 'ban';
    } else if (oldState === 'ban'){

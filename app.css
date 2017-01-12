@@ -61,19 +61,3 @@ html, body {
   font-size: 450% !important;
 
 }
-
-/* animation test */
-.ng-hide-remove {
-  animation: 1s slowshow ease;
-}
-
-
-@keyframes slowshow {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
