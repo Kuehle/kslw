@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
 <body ng-app="app" ng-controller="mapCtrl as vm">
-
+  
   <div class="result" ng-show="vm.result" ng-click="vm.result = ''">
     {{vm.result}}
   </div>
@@ -55,7 +55,7 @@
         </div>
 
       </div>
-
+      
 
 
       <div class="col-xs-12 eval">
@@ -68,8 +68,12 @@
     </div>
   </div>
 
-
-
-
 </body>
 </html>
+
+<script>
+  window.onload = function() {
+    
+    document.getElementsByClassName('maps-wrapper')[0].innerHTML = 'lol'
+  }
+</script>

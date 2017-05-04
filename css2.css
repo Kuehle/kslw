@@ -1,0 +1,144 @@
+html body {
+    background-color: #333333; 
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+}
+
+.overlay:empty {
+    display: none;
+}
+
+.disable-ui {
+    background-color: rgba(40, 0, 0, .5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transition: background-color ease-in;
+    display: none;
+}
+
+.picked-map-overlay {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 10vh;
+    bottom: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18vh;
+    color: white;
+    background-color: rgba(0, 0, 0, .8);
+    text-align: center;
+    font-weight: bold;
+    background-image: url('img/4.jpg');
+    background-size: cover;
+    text-shadow: 0 .1em .2em black;
+    z-index: 80;
+    border-top: solid 15vh black;;
+    border-bottom: solid 15vh black;;  
+}
+
+
+.picked-map-overlay:empty {
+    visibility: hidden;
+}
+
+.map-voting {
+    margin: 2vh auto;
+    max-width: 1200px;
+    height: 87vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 2%;
+}
+
+.map-submit {
+    margin: 0 auto;
+    width: 800px;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.map-submit button {
+    width: 40%;
+    padding: 1em;
+    border: none;
+    background-color: #222222;
+    color: white;
+    font-size: 2.2vh;
+}
+
+.map-submit button:first-child {
+    background-color: #31b0d5;
+}
+
+.map-submit button:nth-child(2) {
+    background-color: #ec971f;
+}
+
+.map {
+    background-color: yellow;
+    flex-basis: auto;
+    height: 23%;
+    width: 23%;
+    border: 1.5vh solid darkgrey;
+    box-sizing: border-box;
+    background-size: cover;
+}
+
+.map-slotmachine {
+    width: 20000px;
+    position: relative;
+    left: 0px;
+    display: flex;
+}
+
+.map-slot {
+    width: 360px;
+    height: 320px;
+    background-color: yellow;
+    margin-right: 40px;
+}
+
+.rng-container {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+}
+
+.rng-container .arrow {
+    border-left: 3px solid green;
+    height: 160px;
+    position: absolute;
+    z-index: 24;
+    margin-left: calc(50% - 1.5px)
+}
+
+.pick {
+    border-color: #00dd00; 
+}
+
+.ban {
+    border-color: red;
+}
