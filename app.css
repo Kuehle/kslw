@@ -27,7 +27,7 @@ html, body {
 }
 
 .map {
-  max-height: 200px;
+  height: 20vh;
   padding: 5px;
   text-align: right;
   font-weight: bold;
