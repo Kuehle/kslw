@@ -20,7 +20,9 @@
     </div>
 </body>
 <script>
-    // TODO mouse over - show name
+  let enableSlotMachine = false
+
+  // TODO mouse over - show name
     var mapList = [
         "Luigis Piste",
         "Peach Beach",
@@ -102,7 +104,8 @@
         document.documentElement.removeEventListener('click', deletePickedMap)
     }
 
-    function generateSlotMachine() {
+  function generateSlotMachine() {
+      enableSlotMachine = true
         if(!pickedList.length) {
             mapList.forEach((val, ind) => {
                 pickedList.push(ind+1)
@@ -145,11 +148,17 @@
         }
     }
 
-    function runSlotMachine(delay = 16000) {
+  function runSlotMachine(delay = 16000) {
+      if (enableSlotMachine) {
         let slotMachine = document.querySelector('.map-slotmachine')
         slotMachine.style.transition = `${delay/1000}s cubic-bezier(0.0, 0, 0.000, 1)`
         slotMachine.style.left = `-${15180 + Math.random()*400}px`
-        setTimeout(() => announcePick(mapToCome), delay)
+          setTimeout(() => announcePick(mapToCome), delay)
+          enableSlotMachine = false
+      } else {
+          
+          document.querySelector('.overlay').innerHTML = "" 
+      }
     }
 
     function announcePick(id) {

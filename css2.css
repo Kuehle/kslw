@@ -129,7 +129,7 @@ html body {
     height: 320px;
     position: absolute;
     z-index: 24;
-    margin-left: calc(50% - 1.5px)
+    margin-left: calc(50% - 2.5px)
 }
 
 .pick {
