@@ -13,6 +13,7 @@ html body {
     left: 0;
     display: flex;
     align-items: center;
+    background-color: rgba(0,0,0,0.8);
 }
 
 .overlay:empty {
@@ -118,18 +119,14 @@ html body {
 }
 
 .rng-container {
-    overflow: hidden;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
     display: none;
+    background: black;
+    padding: 2em;
 }
 
 .rng-container .arrow {
     border-left: 3px solid green;
-    height: 160px;
+    height: 320px;
     position: absolute;
     z-index: 24;
     margin-left: calc(50% - 1.5px)
