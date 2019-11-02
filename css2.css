@@ -125,7 +125,7 @@ html body {
 }
 
 .rng-container .arrow {
-    border-left: 3px solid green;
+    border-left: 5px solid white;
     height: 320px;
     position: absolute;
     z-index: 24;
